@@ -141,37 +141,37 @@
     </section>
 
     <!-- CONTACT / CTA -->
-    <section id="lienhe">
-      <div class="band">
-        <div>
-          <div class="big">Liên hệ ngay để nhận ưu đãi</div>
-          <div>📞 Zalo: <b>0865 550 762</b> • Pikaplus Shop</div>
-        </div>
-        <div class="cta">
-          <a class="btn btn-primary" href="https://zalo.me/0865550762" target="_blank" rel="noopener">Mở chat Zalo</a>
-          <a class="btn btn-ghost" href="mailto:pikaplusshop@gmail.com">Email shop</a>
-          <a id="fbBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener">Nhắn Fanpage</a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div>© <span id="y"></span> Pikaplus Shop. Thương hiệu Pika — màu vàng chủ đạo, xanh thương hiệu.</div>
-    </footer>
+  <!-- CONTACT / CTA -->
+<section id="lienhe">
+  <div class="band">
+    <div>
+      <div class="big">Liên hệ ngay để nhận ưu đãi</div>
+      <div>📞 Zalo: <b>0865 550 762</b> • Pikaplus Shop</div>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://zalo.me/0865550762" target="_blank" rel="noopener">Mở chat Zalo</a>
+      <a class="btn btn-ghost" href="mailto:pikaplusshop@gmail.com">Email shop</a>
+      <a id="fbBtn" class="btn btn-primary" href="#">Nhắn Fanpage</a>
+    </div>
   </div>
+</section>
 
 <script>
   // update year
   document.getElementById('y').textContent = new Date().getFullYear();
 
-  // dynamic fanpage link
+  // fanpage button
   const fbBtn = document.getElementById('fbBtn');
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if(isMobile){
-    fbBtn.href = "fb://page/61579388555570"; // mở app trên mobile
-  } else {
-    fbBtn.href = "https://m.me/61579388555570"; // Messenger web trên PC
+  fbBtn.onclick = function(e){
+    e.preventDefault();
+    const pageId = "61579388555570";
+    const appLink = "fb://page/" + pageId;
+    const webLink = "https://m.me/" + pageId;
+
+    // thử mở app Messenger
+    window.location = appLink;
+
+    // sau 800ms nếu app không mở thì fallback sang web
+    setTimeout(()=>{ window.location = webLink; }, 800);
   }
 </script>
-</body>
-</html>
