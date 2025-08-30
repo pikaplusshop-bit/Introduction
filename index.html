@@ -142,6 +142,7 @@
 
     <!-- CONTACT / CTA -->
   <!-- CONTACT / CTA -->
+<!-- CONTACT / CTA -->
 <section id="lienhe">
   <div class="band">
     <div>
@@ -151,27 +152,8 @@
     <div class="cta">
       <a class="btn btn-primary" href="https://zalo.me/0865550762" target="_blank" rel="noopener">Mở chat Zalo</a>
       <a class="btn btn-ghost" href="mailto:pikaplusshop@gmail.com">Email shop</a>
-      <a id="fbBtn" class="btn btn-primary" href="#">Nhắn Fanpage</a>
+      <a class="btn btn-primary" href="https://m.me/61579388555570" target="_blank" rel="noopener">🔵💬 Nhắn Fanpage</a>
     </div>
   </div>
 </section>
 
-<script>
-  // update year
-  document.getElementById('y').textContent = new Date().getFullYear();
-
-  // fanpage button
-  const fbBtn = document.getElementById('fbBtn');
-  fbBtn.onclick = function(e){
-    e.preventDefault();
-    const pageId = "61579388555570";
-    const appLink = "fb://page/" + pageId;
-    const webLink = "https://m.me/" + pageId;
-
-    // thử mở app Messenger
-    window.location = appLink;
-
-    // sau 800ms nếu app không mở thì fallback sang web
-    setTimeout(()=>{ window.location = webLink; }, 800);
-  }
-</script>
