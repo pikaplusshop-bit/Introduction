@@ -7,7 +7,7 @@
   <!-- Open Graph / Preview -->
   <meta property="og:title" content="Pikaplus Shop — ChatGPT Plus & Canva VIP" />
   <meta property="og:description" content="Nâng ChatGPT Plus giá tốt, Canva VIP 1 năm. Hỗ trợ nhanh, an toàn, xuyên suốt." />
-  <meta property="og:image" content="pikaplus-banner.png" />
+  <meta property="og:image" content="pikaplus-og.png" />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#ffd93d" />
   <link rel="icon" href="pikaplus-favicon.png" />
@@ -20,7 +20,6 @@
       --accent:#ffd93d;
       --accent2:#ffb703;
       --brand:#2e7d32;
-      --ink:#103245;
       --card:#fffdfa;
       --border:rgba(0,0,0,.08);
       --shadow:0 10px 40px rgba(0,0,0,.25);
@@ -43,6 +42,7 @@
     .btn-primary:hover{background:var(--accent2)}
     .btn-ghost{background:#fff;border:1px solid var(--border)}
     .cover{border-radius:18px;border:1px solid var(--border);box-shadow:0 6px 24px rgba(0,0,0,.12);width:100%;height:100%;object-fit:cover}
+
     section{margin-top:28px}
     .sec-title{font-size:22px;margin:0 0 12px}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -60,6 +60,7 @@
 </head>
 <body>
   <div class="wrap">
+    <!-- HERO -->
     <header class="hero">
       <div class="hero-inner">
         <div>
@@ -82,6 +83,17 @@
       </div>
     </header>
 
+    <!-- FEATURES -->
+    <section id="uudai">
+      <h2 class="sec-title">Vì sao chọn Pikaplus?</h2>
+      <div class="grid-3">
+        <div class="card"><div class="pill">Nhanh chóng</div><p>Nhận ưu đãi và nâng cấp chỉ trong vài phút. Theo dõi tiến trình rõ ràng.</p></div>
+        <div class="card"><div class="pill">An toàn</div><p>Quy trình chuẩn, bảo vệ thông tin. Hỗ trợ đổi/hoàn theo chính sách.</p></div>
+        <div class="card"><div class="pill">Hỗ trợ 1:1</div><p>Đội ngũ trực Zalo hỗ trợ từng bước cho đến khi kích hoạt xong.</p></div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
     <section id="banggia">
       <h2 class="sec-title">Bảng giá dịch vụ</h2>
       <div class="grid-3">
@@ -93,6 +105,7 @@
             <li>GPT-5 reasoning, tải ảnh/ghi âm</li>
             <li>Hỗ trợ kích hoạt & sử dụng</li>
           </ul>
+          <a class="btn btn-primary" href="#lienhe">Liên hệ nâng ngay</a>
         </div>
         <div class="card">
           <div class="pill">Canva VIP</div>
@@ -100,7 +113,9 @@
           <ul>
             <li>Đầy đủ tính năng Pro</li>
             <li>Cấp admin Canva từ 450K</li>
+            <li>Bảo hành theo gói</li>
           </ul>
+          <a class="btn btn-primary" href="#lienhe">Nhận ưu đãi</a>
         </div>
         <div class="card">
           <div class="pill">Combo & Tuỳ chọn</div>
@@ -108,30 +123,55 @@
           <ul>
             <li>Combo GPT Plus + Canva VIP</li>
             <li>Gia hạn, chuyển gói, hỗ trợ team</li>
+            <li>Hoá đơn & chứng từ theo yêu cầu</li>
           </ul>
+          <a class="btn btn-primary" href="#lienhe">Tư vấn nhanh</a>
         </div>
       </div>
     </section>
 
-    <section id="lienhe">
-  <div class="band">
-    <div>
-      <div class="big">Liên hệ ngay để nhận ưu đãi</div>
-      <div>📞 Zalo: <b>0865 550 762</b> • Pikaplus Shop</div>
-    </div>
-    <div class="cta">
-      <a class="btn btn-primary" href="https://zalo.me/0865550762" target="_blank">Mở chat Zalo</a>
-      <a class="btn btn-ghost" href="mailto:pikaplusshop@gmail.com">Email shop</a>
-      <a class="btn btn-ghost" href="https://m.me/61579388555570" target="_blank">Nhắn Fanpage</a>
-    </div>
-  </div>
-</section>
+    <!-- HOW IT WORKS -->
+    <section id="quytrinh">
+      <h2 class="sec-title">Quy trình 3 bước</h2>
+      <div class="grid-3">
+        <div class="card"><b>1) Liên hệ</b><ul><li>Nhắn Zalo số <b>0865 550 762</b> (Vũ Luân)</li><li>Xác nhận gói và nhận hướng dẫn</li></ul></div>
+        <div class="card"><b>2) Kích hoạt</b><ul><li>Làm theo hướng dẫn an toàn</li><li>Hoàn tất trong vài phút</li></ul></div>
+        <div class="card"><b>3) Bảo hành</b><ul><li>Hỗ trợ trong suốt thời hạn gói</li><li>Gia hạn/đổi gói linh hoạt</li></ul></div>
+      </div>
+    </section>
 
+    <!-- CONTACT / CTA -->
+    <section id="lienhe">
+      <div class="band">
+        <div>
+          <div class="big">Liên hệ ngay để nhận ưu đãi</div>
+          <div>📞 Zalo: <b>0865 550 762</b> • Pikaplus Shop</div>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://zalo.me/0865550762" target="_blank" rel="noopener">Mở chat Zalo</a>
+          <a class="btn btn-ghost" href="mailto:pikaplusshop@gmail.com">Email shop</a>
+          <a id="fbBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener">Nhắn Fanpage</a>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <div>© <span id="y"></span> Pikaplus Shop. Thương hiệu Pika — màu vàng chủ đạo, xanh thương hiệu.</div>
     </footer>
   </div>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+<script>
+  // update year
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // dynamic fanpage link
+  const fbBtn = document.getElementById('fbBtn');
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if(isMobile){
+    fbBtn.href = "fb://page/61579388555570"; // mở app trên mobile
+  } else {
+    fbBtn.href = "https://m.me/61579388555570"; // Messenger web trên PC
+  }
+</script>
 </body>
 </html>
