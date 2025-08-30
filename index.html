@@ -150,7 +150,10 @@
         <div class="cta">
           <a class="btn btn-primary" href="https://zalo.me/0865550762" target="_blank" rel="noopener">Mở chat Zalo</a>
           <a class="btn btn-ghost" href="mailto:pikaplusshop@gmail.com">Email shop</a>
-          <a id="fbBtn" class="btn btn-primary" href="https://m.me/61579388555570?ref=promo_web_intro" rel="noopener">🔵💬 Nhắn Fanpage</a>
+          <a id="fbBtn" class="btn btn-primary"
+             href="https://m.me/61579388555570?ref=promo_web_intro" rel="noopener">
+            🔵💬 Nhắn Fanpage
+          </a>
         </div>
       </div>
     </section>
@@ -164,33 +167,31 @@
   // update year
   document.getElementById('y').textContent = new Date().getFullYear();
 
-  // Smart Messenger deep link
+  // Phát hiện in-app browser & nhắc mở ngoài
   (function () {
-    const FB_ID = '61579388555570';
-    const REF = 'promo_web_intro';
-    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const isAndroid = /Android/i.test(navigator.userAgent);
+    const ua = navigator.userAgent.toLowerCase();
+    const inApp =
+      ua.includes('fbav') || ua.includes('fb_iab') ||
+      ua.includes('zalo') || ua.includes('line') ||
+      ua.includes('micromessenger');
 
-    function openMessenger() {
-      const deep = `fb-messenger://user-thread/${FB_ID}`;
-      const web  = `https://m.me/${FB_ID}?ref=${encodeURIComponent(REF)}`;
-
-      if (isIOS || isAndroid) {
-        const start = Date.now();
-        window.location.href = deep;
-        setTimeout(() => {
-          if (Date.now() - start < 1200) {
-            window.open(web, '_blank', 'noopener');
-          }
-        }, 800);
-      } else {
-        window.open(web, '_blank', 'noopener');
-      }
+    if (inApp) {
+      const bar = document.createElement('div');
+      bar.style.cssText =
+        'position:fixed;left:0;right:0;bottom:0;z-index:9999;padding:10px 12px;' +
+        'background:#fffbe6;border-top:1px solid #f0d98c;font-weight:600;' +
+        'display:flex;justify-content:center;gap:8px;';
+      bar.innerHTML =
+        '📌 Để nhắn Fanpage đúng khuyến mãi, hãy <b>Mở bằng Safari/Chrome</b> rồi bấm lại nút <b>Nhắn Fanpage</b>.';
+      document.body.appendChild(bar);
     }
 
+    // Trên PC: mở tab mới
     document.getElementById('fbBtn')?.addEventListener('click', function (e) {
-      e.preventDefault();
-      openMessenger();
+      if (!/android|iphone|ipad|ipod/i.test(navigator.userAgent)) {
+        e.preventDefault();
+        window.open(this.href, '_blank', 'noopener');
+      }
     });
   })();
 </script>
