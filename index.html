@@ -176,16 +176,7 @@
       ua.includes('zalo') || ua.includes('line') ||
       ua.includes('micromessenger');
 
-    if (inApp) {
-      const bar = document.createElement('div');
-      bar.style.cssText =
-        'position:fixed;left:0;right:0;bottom:0;z-index:9999;padding:10px 12px;' +
-        'background:#fffbe6;border-top:1px solid #f0d98c;font-weight:600;' +
-        'display:flex;justify-content:center;gap:8px;';
-      bar.innerHTML =
-        '📌 Để nhắn Fanpage đúng khuyến mãi, hãy <b>Mở bằng Safari/Chrome</b> rồi bấm lại nút <b>Nhắn Fanpage</b>.';
-      document.body.appendChild(bar);
-    }
+   
 
     // Trên PC: mở tab mới
     document.getElementById('fbBtn')?.addEventListener('click', function (e) {
